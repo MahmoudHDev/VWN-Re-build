@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		1ED4ACBE289D220C00FFD265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4ACBD289D220C00FFD265 /* AppDelegate.swift */; };
 		1ED4ACC0289D220C00FFD265 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4ACBF289D220C00FFD265 /* SceneDelegate.swift */; };
-		1ED4ACC2289D220C00FFD265 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4ACC1289D220C00FFD265 /* ViewController.swift */; };
+		1ED4ACC2289D220C00FFD265 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4ACC1289D220C00FFD265 /* MainViewController.swift */; };
 		1ED4ACC5289D220C00FFD265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4ACC3289D220C00FFD265 /* Main.storyboard */; };
 		1ED4ACC8289D220C00FFD265 /* NVMProject_Re_build.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4ACC6289D220C00FFD265 /* NVMProject_Re_build.xcdatamodeld */; };
 		1ED4ACCA289D220F00FFD265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4ACC9289D220F00FFD265 /* Assets.xcassets */; };
 		1ED4ACCD289D220F00FFD265 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4ACCB289D220F00FFD265 /* LaunchScreen.storyboard */; };
+		1ED4ACDF289D52C500FFD265 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4ACDE289D52C500FFD265 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1ED4ACBA289D220C00FFD265 /* NVMProject-Re-build.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NVMProject-Re-build.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED4ACBD289D220C00FFD265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ED4ACBF289D220C00FFD265 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1ED4ACC1289D220C00FFD265 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1ED4ACC1289D220C00FFD265 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1ED4ACC4289D220C00FFD265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1ED4ACC7289D220C00FFD265 /* NVMProject_Re_build.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NVMProject_Re_build.xcdatamodel; sourceTree = "<group>"; };
 		1ED4ACC9289D220F00FFD265 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ED4ACCC289D220F00FFD265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ED4ACCE289D220F00FFD265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ED4ACDE289D52C500FFD265 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,81 @@
 		1ED4ACBC289D220C00FFD265 /* NVMProject-Re-build */ = {
 			isa = PBXGroup;
 			children = (
+				1ED4ACDD289D52B500FFD265 /* Constants */,
+				1ED4ACDC289D528200FFD265 /* Extension */,
+				1ED4ACDB289D521900FFD265 /* Storyboards */,
+				1ED4ACD6289D51AD00FFD265 /* Modules */,
 				1ED4ACBD289D220C00FFD265 /* AppDelegate.swift */,
 				1ED4ACBF289D220C00FFD265 /* SceneDelegate.swift */,
-				1ED4ACC1289D220C00FFD265 /* ViewController.swift */,
-				1ED4ACC3289D220C00FFD265 /* Main.storyboard */,
 				1ED4ACC9289D220F00FFD265 /* Assets.xcassets */,
 				1ED4ACCB289D220F00FFD265 /* LaunchScreen.storyboard */,
 				1ED4ACCE289D220F00FFD265 /* Info.plist */,
 				1ED4ACC6289D220C00FFD265 /* NVMProject_Re_build.xcdatamodeld */,
 			);
 			path = "NVMProject-Re-build";
+			sourceTree = "<group>";
+		};
+		1ED4ACD6289D51AD00FFD265 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1ED4ACD7289D51BA00FFD265 /* Main View */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1ED4ACD7289D51BA00FFD265 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				1ED4ACDA289D51D300FFD265 /* Model */,
+				1ED4ACD9289D51CE00FFD265 /* View */,
+				1ED4ACD8289D51C700FFD265 /* Presenter */,
+			);
+			path = "Main View";
+			sourceTree = "<group>";
+		};
+		1ED4ACD8289D51C700FFD265 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1ED4ACD9289D51CE00FFD265 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1ED4ACC1289D220C00FFD265 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1ED4ACDA289D51D300FFD265 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1ED4ACDB289D521900FFD265 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1ED4ACC3289D220C00FFD265 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1ED4ACDC289D528200FFD265 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1ED4ACDD289D52B500FFD265 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1ED4ACDE289D52C500FFD265 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +207,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED4ACC2289D220C00FFD265 /* ViewController.swift in Sources */,
+				1ED4ACDF289D52C500FFD265 /* Constants.swift in Sources */,
+				1ED4ACC2289D220C00FFD265 /* MainViewController.swift in Sources */,
 				1ED4ACBE289D220C00FFD265 /* AppDelegate.swift in Sources */,
 				1ED4ACC8289D220C00FFD265 /* NVMProject_Re_build.xcdatamodeld in Sources */,
 				1ED4ACC0289D220C00FFD265 /* SceneDelegate.swift in Sources */,
