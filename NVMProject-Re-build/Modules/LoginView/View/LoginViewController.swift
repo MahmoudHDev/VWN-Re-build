@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
               let delegate = windowScene.delegate as? SceneDelegate else { return nil }
         return delegate
     }
+    
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +32,15 @@ class LoginViewController: UIViewController {
     func textFieldSyle() {
         usernameTextField.layer.cornerRadius = 25
         passwordTextField.layer.cornerRadius = 25
+        
         usernameTextField.layer.masksToBounds = true
         passwordTextField.layer.masksToBounds = true
         
         usernameTextField.setLeftPaddingPoints(36)
         passwordTextField.setLeftPaddingPoints(36)
-        print("TextField Styled")
+        
+        usernameTextField.text = "admin@admin.com"
+        passwordTextField.text = "password"
         
     }
     

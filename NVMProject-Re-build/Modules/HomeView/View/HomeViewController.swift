@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateUI()
     }
     
     //MARK:- Methods
@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
         searchTextField.attributedPlaceholder = NSAttributedString(
             string: "Search",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        
     }
     
     //MARK:- Actions
