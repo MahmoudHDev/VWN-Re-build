@@ -8,5 +8,12 @@
 import Foundation
 
 struct K {
-    // Static variables
+    
+    struct collectionViewCells {
+        static let catgoires    = "catgoriesCell"
+        static let list         = "listCell"
+        static let products     = "products"
+        
+    }
+    
 }
