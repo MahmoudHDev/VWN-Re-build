@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
     }
 
     //MARK:- Methods
-    func textFieldSyle() {
+    private func textFieldSyle() {
         usernameTextField.layer.cornerRadius = 25
         passwordTextField.layer.cornerRadius = 25
         
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    func buttonsStyle() {
+    private func buttonsStyle() {
         signInBtn.layer.cornerRadius = 8
     }
     

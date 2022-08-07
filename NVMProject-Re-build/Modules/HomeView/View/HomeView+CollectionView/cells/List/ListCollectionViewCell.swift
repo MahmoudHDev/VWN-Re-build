@@ -21,8 +21,14 @@ class ListCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: "ListCollectionViewCell", bundle: nil)
     }
     
-    func setCell(title: String) {
+    func setCell(title: String, isSelected: Bool) {
         self.title.text = title
+        if isSelected {
+            self.title.textColor = .black
+        }else{
+            self.title.textColor = .gray
+        }
+        
     }
 }
 
