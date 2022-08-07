@@ -131,6 +131,7 @@
                     <navigationItem key="navigationItem" id="4lc-es-629"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
+                        <outlet property="bGroundImg" destination="ZM6-Iz-agp" id="c94-s3-vN6"/>
                         <outlet property="buttonsContainer" destination="wVV-Od-ci2" id="NH1-fa-zbt"/>
                         <outlet property="signUpButton" destination="2uZ-CI-cQ8" id="YPA-XM-Ies"/>
                     </connections>

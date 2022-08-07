@@ -24,8 +24,8 @@ extension HomeViewController: UICollectionViewDataSource {
         
         // Style
         catgoriesCollectionView.backgroundColor = .none
-        listsCollectionView.backgroundColor = .none
-        productsCollectionView.backgroundColor = .none
+        listsCollectionView.backgroundColor     = .none
+        productsCollectionView.backgroundColor  = .none
         
     }
     

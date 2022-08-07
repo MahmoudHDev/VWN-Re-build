@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     //MARK:- Outlets
     @IBOutlet weak var buttonsContainer: UIView!
     @IBOutlet weak var signUpButton    : UIButton!
-    
+    @IBOutlet weak var bGroundImg      : UIImageView!
     //MARK:- Properties
 
     
@@ -24,8 +24,9 @@ class MainViewController: UIViewController {
     //MARK:- Methods
 
     func updateUI() {
-        signUpButton.layer.cornerRadius = 20
+        signUpButton.layer.cornerRadius     = 20
         buttonsContainer.layer.cornerRadius = 20
+        
     }
     //MARK:- Actions
     @IBAction func logInBtn(_ sender: UIButton) {

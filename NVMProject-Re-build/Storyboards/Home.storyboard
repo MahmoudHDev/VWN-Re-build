@@ -83,7 +83,9 @@
                                             <constraint firstAttribute="trailing" secondItem="YEN-ls-P3C" secondAttribute="trailing" constant="16" id="736-DF-chD"/>
                                             <constraint firstItem="7as-9l-wU7" firstAttribute="top" secondItem="gQz-ea-gwN" secondAttribute="bottom" constant="38" id="9fT-zu-qW9"/>
                                             <constraint firstItem="41J-kP-BcX" firstAttribute="leading" secondItem="5sb-sE-Alo" secondAttribute="leading" constant="27" id="DXn-YP-Eey"/>
+                                            <constraint firstItem="7as-9l-wU7" firstAttribute="height" secondItem="5sb-sE-Alo" secondAttribute="height" multiplier="0.559565" id="HBF-Hk-n0e"/>
                                             <constraint firstAttribute="trailing" secondItem="YuJ-DT-zEY" secondAttribute="trailing" id="QvF-aF-5FN"/>
+                                            <constraint firstAttribute="bottom" secondItem="7as-9l-wU7" secondAttribute="bottom" id="Zpv-9B-Mjr"/>
                                             <constraint firstItem="gQz-ea-gwN" firstAttribute="top" secondItem="YuJ-DT-zEY" secondAttribute="bottom" constant="40" id="aeM-yX-HP0"/>
                                             <constraint firstAttribute="trailing" secondItem="7as-9l-wU7" secondAttribute="trailing" constant="16" id="dC8-wv-lmq"/>
                                             <constraint firstAttribute="trailing" secondItem="gQz-ea-gwN" secondAttribute="trailing" id="dek-hc-Qgc"/>
@@ -92,7 +94,6 @@
                                             <constraint firstItem="YEN-ls-P3C" firstAttribute="top" secondItem="41J-kP-BcX" secondAttribute="bottom" constant="25" id="hKR-V6-i53"/>
                                             <constraint firstItem="YuJ-DT-zEY" firstAttribute="leading" secondItem="5sb-sE-Alo" secondAttribute="leading" constant="16" id="lSF-ZK-5xi"/>
                                             <constraint firstItem="gQz-ea-gwN" firstAttribute="leading" secondItem="5sb-sE-Alo" secondAttribute="leading" constant="40" id="r8p-C3-Jfy"/>
-                                            <constraint firstAttribute="bottom" secondItem="7as-9l-wU7" secondAttribute="bottom" id="tKo-hx-zdT"/>
                                             <constraint firstItem="41J-kP-BcX" firstAttribute="top" secondItem="5sb-sE-Alo" secondAttribute="top" constant="33" id="uWo-yd-mo0"/>
                                         </constraints>
                                     </view>
