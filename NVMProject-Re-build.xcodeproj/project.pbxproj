@@ -32,6 +32,8 @@
 		1ED4ACCA289D220F00FFD265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4ACC9289D220F00FFD265 /* Assets.xcassets */; };
 		1ED4ACCD289D220F00FFD265 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4ACCB289D220F00FFD265 /* LaunchScreen.storyboard */; };
 		1ED4ACDF289D52C500FFD265 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4ACDE289D52C500FFD265 /* Constants.swift */; };
+		1EE3A12428A054AA002B3272 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3A12328A054AA002B3272 /* AddProductViewController.swift */; };
+		1EE3A12C28A054DF002B3272 /* AddProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3A12B28A054DF002B3272 /* AddProduct.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		1ED4ACCC289D220F00FFD265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ED4ACCE289D220F00FFD265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ED4ACDE289D52C500FFD265 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1EE3A12328A054AA002B3272 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		1EE3A12B28A054DF002B3272 /* AddProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddProduct.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,7 @@
 		1ED4ACD6289D51AD00FFD265 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1EE3A12628A054B5002B3272 /* AddProductView */,
 				1ED4ACD7289D51BA00FFD265 /* MainView */,
 				1E7BEF82289D61DE003D44C7 /* LoginView */,
 				1EA14F46289D80F600E81817 /* HomeView */,
@@ -271,6 +276,7 @@
 				1ED4ACC3289D220C00FFD265 /* Main.storyboard */,
 				1E7BEF7F289D5BDD003D44C7 /* Login.storyboard */,
 				1EA14F43289D7E2800E81817 /* Home.storyboard */,
+				1EE3A12B28A054DF002B3272 /* AddProduct.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -290,6 +296,38 @@
 				1ED4ACDE289D52C500FFD265 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		1EE3A12628A054B5002B3272 /* AddProductView */ = {
+			isa = PBXGroup;
+			children = (
+				1EE3A12A28A054CF002B3272 /* Model */,
+				1EE3A12928A054C9002B3272 /* View */,
+				1EE3A12728A054BE002B3272 /* Presenter */,
+			);
+			path = AddProductView;
+			sourceTree = "<group>";
+		};
+		1EE3A12728A054BE002B3272 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1EE3A12928A054C9002B3272 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EE3A12328A054AA002B3272 /* AddProductViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1EE3A12A28A054CF002B3272 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +390,7 @@
 				1E7BEF80289D5BDD003D44C7 /* Login.storyboard in Resources */,
 				1EA14F60289D8D5200E81817 /* ListCollectionViewCell.xib in Resources */,
 				1EA14F65289D8D8E00E81817 /* ProductsCollectionViewCell.xib in Resources */,
+				1EE3A12C28A054DF002B3272 /* AddProduct.storyboard in Resources */,
 				1EA14F44289D7E2800E81817 /* Home.storyboard in Resources */,
 				1ED4ACCD289D220F00FFD265 /* LaunchScreen.storyboard in Resources */,
 				1ED4ACCA289D220F00FFD265 /* Assets.xcassets in Resources */,
@@ -375,6 +414,7 @@
 				1EA14F4E289D82FD00E81817 /* HomeTabBar.swift in Sources */,
 				1ED4ACC2289D220C00FFD265 /* MainViewController.swift in Sources */,
 				1EA14F64289D8D8E00E81817 /* ProductsCollectionViewCell.swift in Sources */,
+				1EE3A12428A054AA002B3272 /* AddProductViewController.swift in Sources */,
 				1EA14F4B289D814500E81817 /* HomeViewController.swift in Sources */,
 				1EA14F5A289D8D3500E81817 /* CatgoriesCollectionViewCell.swift in Sources */,
 				1EA14F5F289D8D5200E81817 /* ListCollectionViewCell.swift in Sources */,
