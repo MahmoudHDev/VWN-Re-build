@@ -32,6 +32,9 @@
                                                         <rect key="frame" x="0.0" y="40" width="12.5" height="22"/>
                                                         <color key="tintColor" red="0.98431372549019602" green="0.41960784313725491" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="chevron.left" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="backbtn:" destination="fVX-XL-zHj" eventType="touchUpInside" id="VU8-Ag-cbN"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Product" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdH-vf-GCt">
                                                         <rect key="frame" x="27.5" y="36" width="141.5" height="29.5"/>

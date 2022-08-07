@@ -43,8 +43,12 @@ class AddProductViewController: UIViewController {
 
     
     //MARK:- Propertiess
+    var picker          = UIPickerView()
+    var mealQuantity    : Int = 0
+    var priceQuantity   : Int = 0
+    var num             : Int = -1
+    var itemType        : [String] = ["Breakfast", "Dinner", "Launch", "Dessert"]
 
-    
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,33 +96,56 @@ class AddProductViewController: UIViewController {
     
     // Meal Buttons
     @IBAction func mealUp(_ sender: UIButton) {
+        mealQuantity += 1
+        mealTextField.text = String(mealQuantity)
         
     }
     
     @IBAction func mealDown(_ sender: UIButton) {
-        
+        mealQuantity -= 1
+        mealTextField.text = String(mealQuantity)
     }
     
     // Item Type
     @IBAction func itemTypeUp(_ sender: UIButton) {
+        // if num greater than itemType.count return the num to value of 0
+        
+        num += 1
+        let type = itemType[num]
+        itemTypeTextField.text = type
         
     }
 
     @IBAction func itemTypeDown(_ sender: UIButton) {
+        // if num smaller than itemType.count return the num with value 0
         
+        num -= 1
+        let type = itemType[num]
+        itemTypeTextField.text = type
+
     }
     
     // Price
     @IBAction func priceUp(_ sender: UIButton) {
+        priceQuantity += 1
+        priceTextField.text = String(priceQuantity)
         
     }
     @IBAction func priceDown(_ sender: UIButton) {
-        
+        priceQuantity -= 1
+        priceTextField.text = String(priceQuantity)
+
     }
     
     // Done Button
     @IBAction func doneBtn(_ sender: UIButton) {
-        
+        // Send the model to the database
+    }
+    
+    // Back Button
+    @IBAction func backbtn(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        // Dismiss the current view
     }
 
 }
