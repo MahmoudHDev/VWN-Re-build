@@ -19,7 +19,7 @@ class ProductsCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cellStyle()
     }
 
     //MARK:- Methods
@@ -32,6 +32,11 @@ class ProductsCollectionViewCell: UICollectionViewCell {
         self.img.image  = img
         self.title.text = title
         self.price.text = price
+    }
+    
+    func cellStyle() {
+        containerV.layer.cornerRadius = 20
+        img       .layer.cornerRadius = 20
     }
     
 }

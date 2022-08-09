@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,7 +10,7 @@
         <!--Add Product View Controller-->
         <scene sceneID="O64-ss-Zc1">
             <objects>
-                <viewController id="fVX-XL-zHj" customClass="AddProductViewController" customModule="NVMProject_Re_build" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddProduct" modalPresentationStyle="fullScreen" id="fVX-XL-zHj" customClass="AddProductViewController" customModule="NVMProject_Re_build" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tc8-hE-yEu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,7 +319,6 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="MealView" destination="knb-27-eVp" id="92L-ED-NZ4"/>
-                        <outlet property="addCollectionView" destination="eWj-Zt-pWQ" id="dqx-vc-eYe"/>
                         <outlet property="doneBtn" destination="JS8-VK-81r" id="ip0-CL-RbZ"/>
                         <outlet property="itemTypeQuantityDown" destination="kPQ-yN-an5" id="B5a-Ub-Ei7"/>
                         <outlet property="itemTypeQuantityUp" destination="S4M-3u-bmd" id="9QP-Js-e3a"/>
@@ -333,6 +331,7 @@
                         <outlet property="priceTextField" destination="gCl-RF-uTD" id="dHO-bd-T3i"/>
                         <outlet property="priceUp" destination="14b-tR-sSt" id="kiX-kf-kta"/>
                         <outlet property="priceView" destination="uEe-dS-XeS" id="eq0-yq-Wea"/>
+                        <outlet property="productCollectionView" destination="eWj-Zt-pWQ" id="dqx-vc-eYe"/>
                         <outlet property="productInfoTextField" destination="4lT-jT-2g3" id="EJq-QU-Cbp"/>
                         <outlet property="productInfoView" destination="rUn-lx-UgP" id="R6B-xm-ThS"/>
                         <outlet property="productNameTextField" destination="s3Z-2r-zaF" id="3tc-Rq-H0U"/>

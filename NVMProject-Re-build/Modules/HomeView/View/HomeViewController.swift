@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var listsCollectionView          : UICollectionView!
     @IBOutlet weak var productsCollectionView       : UICollectionView!
 
+    @IBOutlet weak var addProductBttn: UIButton!
     
     //MARK:- Properties
     var arrCatgories    = [CatgoryModel]()
@@ -38,6 +39,7 @@ class HomeViewController: UIViewController {
             string: "Search",
             attributes:
                 [NSAttributedString.Key.foregroundColor: UIColor.black])
+        addProductBttn.layer.cornerRadius = 20
     }
     
     private func setCatgoriesModel() {
@@ -63,6 +65,9 @@ class HomeViewController: UIViewController {
     
     //MARK:- Actions
 
-
+    @IBAction func addProductBtn(_ sender: UIButton ){
+        let vc = UIStoryboard(name: "AddProduct", bundle: nil).instantiateViewController(identifier: "AddProduct")
+        present(vc, animated: true, completion: nil)
+    }
 
 }

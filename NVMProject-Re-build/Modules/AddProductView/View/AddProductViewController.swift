@@ -10,7 +10,7 @@ import UIKit
 class AddProductViewController: UIViewController {
     //MARK:- Outlets
     // CollectionView
-    @IBOutlet weak var addCollectionView            : UICollectionView!
+    @IBOutlet weak var productCollectionView        : UICollectionView!
     
     // UIViews
     @IBOutlet weak var productNameView              : UIView!
@@ -47,12 +47,13 @@ class AddProductViewController: UIViewController {
     var mealQuantity    : Int = 0
     var priceQuantity   : Int = 0
     var num             : Int = -1
-    var itemType        : [String] = ["Breakfast", "Dinner", "Launch", "Dessert"]
-
+    var itemType        : [String]  = ["Breakfast", "Dinner", "Launch", "Dessert"]
+    var arrImmgs        : [UIImage] = []
+    
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.collectionViewConfig()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,18 +129,21 @@ class AddProductViewController: UIViewController {
     // Price
     @IBAction func priceUp(_ sender: UIButton) {
         priceQuantity += 1
-        priceTextField.text = String(priceQuantity)
+        priceTextField.text = "\(priceQuantity) L.E"
         
     }
     @IBAction func priceDown(_ sender: UIButton) {
         priceQuantity -= 1
-        priceTextField.text = String(priceQuantity)
+        priceTextField.text = "\(priceQuantity) L.E"
 
     }
     
     // Done Button
     @IBAction func doneBtn(_ sender: UIButton) {
         // Send the model to the database
+        print("save to coreData")
+        // after make the condition
+        self.dismiss(animated: true, completion: nil)
     }
     
     // Back Button

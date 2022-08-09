@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="873"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to eat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41J-kP-BcX">
-                                                <rect key="frame" x="27" y="33" width="371" height="103"/>
+                                                <rect key="frame" x="27" y="33" width="369" height="103"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="43"/>
                                                 <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -76,6 +76,19 @@
                                                 </collectionViewFlowLayout>
                                                 <cells/>
                                             </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eY7-4G-89O">
+                                                <rect key="frame" x="366" y="10" width="40" height="40"/>
+                                                <color key="backgroundColor" red="0.98431372549999996" green="0.41960784309999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="CcR-3c-oPb"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Utb-MT-uDS"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="plus" catalog="system"/>
+                                                <connections>
+                                                    <action selector="addProductBtn:" destination="RAo-yP-jaN" eventType="touchUpInside" id="V11-AP-G0T"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="YuJ-DT-zEY" firstAttribute="top" secondItem="YEN-ls-P3C" secondAttribute="bottom" constant="19" id="0X8-dM-7aq"/>
@@ -84,15 +97,17 @@
                                             <constraint firstItem="7as-9l-wU7" firstAttribute="top" secondItem="gQz-ea-gwN" secondAttribute="bottom" constant="38" id="9fT-zu-qW9"/>
                                             <constraint firstItem="41J-kP-BcX" firstAttribute="leading" secondItem="5sb-sE-Alo" secondAttribute="leading" constant="27" id="DXn-YP-Eey"/>
                                             <constraint firstItem="7as-9l-wU7" firstAttribute="height" secondItem="5sb-sE-Alo" secondAttribute="height" multiplier="0.559565" id="HBF-Hk-n0e"/>
+                                            <constraint firstItem="eY7-4G-89O" firstAttribute="top" secondItem="5sb-sE-Alo" secondAttribute="top" constant="10" id="PJR-aL-Nvu"/>
                                             <constraint firstAttribute="trailing" secondItem="YuJ-DT-zEY" secondAttribute="trailing" id="QvF-aF-5FN"/>
                                             <constraint firstAttribute="bottom" secondItem="7as-9l-wU7" secondAttribute="bottom" id="Zpv-9B-Mjr"/>
                                             <constraint firstItem="gQz-ea-gwN" firstAttribute="top" secondItem="YuJ-DT-zEY" secondAttribute="bottom" constant="40" id="aeM-yX-HP0"/>
                                             <constraint firstAttribute="trailing" secondItem="7as-9l-wU7" secondAttribute="trailing" constant="16" id="dC8-wv-lmq"/>
                                             <constraint firstAttribute="trailing" secondItem="gQz-ea-gwN" secondAttribute="trailing" id="dek-hc-Qgc"/>
-                                            <constraint firstAttribute="trailing" secondItem="41J-kP-BcX" secondAttribute="trailing" constant="16" id="fVw-s8-nWa"/>
+                                            <constraint firstAttribute="trailing" secondItem="41J-kP-BcX" secondAttribute="trailing" constant="18" id="fVw-s8-nWa"/>
                                             <constraint firstItem="YEN-ls-P3C" firstAttribute="leading" secondItem="5sb-sE-Alo" secondAttribute="leading" constant="67" id="gc0-Zf-1gc"/>
                                             <constraint firstItem="YEN-ls-P3C" firstAttribute="top" secondItem="41J-kP-BcX" secondAttribute="bottom" constant="25" id="hKR-V6-i53"/>
                                             <constraint firstItem="YuJ-DT-zEY" firstAttribute="leading" secondItem="5sb-sE-Alo" secondAttribute="leading" constant="16" id="lSF-ZK-5xi"/>
+                                            <constraint firstAttribute="trailing" secondItem="eY7-4G-89O" secondAttribute="trailing" constant="8" id="pOM-EK-UZg"/>
                                             <constraint firstItem="gQz-ea-gwN" firstAttribute="leading" secondItem="5sb-sE-Alo" secondAttribute="leading" constant="40" id="r8p-C3-Jfy"/>
                                             <constraint firstItem="41J-kP-BcX" firstAttribute="top" secondItem="5sb-sE-Alo" secondAttribute="top" constant="33" id="uWo-yd-mo0"/>
                                         </constraints>
@@ -127,6 +142,7 @@
                     <navigationItem key="navigationItem" id="HVA-5V-yjd"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
+                        <outlet property="addProductBttn" destination="eY7-4G-89O" id="Q8s-Ea-Jp9"/>
                         <outlet property="catgoriesCollectionView" destination="YuJ-DT-zEY" id="Ytf-Rz-MoJ"/>
                         <outlet property="listsCollectionView" destination="gQz-ea-gwN" id="E7x-ra-Gmm"/>
                         <outlet property="productsCollectionView" destination="7as-9l-wU7" id="m5n-5I-XbT"/>
@@ -174,6 +190,7 @@
     </scenes>
     <resources>
         <image name="Mask Group 1" width="428" height="926"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
