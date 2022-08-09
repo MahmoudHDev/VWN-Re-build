@@ -24,6 +24,7 @@
 		1EA14F60289D8D5200E81817 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA14F5E289D8D5200E81817 /* ListCollectionViewCell.xib */; };
 		1EA14F64289D8D8E00E81817 /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA14F62289D8D8E00E81817 /* ProductsCollectionViewCell.swift */; };
 		1EA14F65289D8D8E00E81817 /* ProductsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA14F63289D8D8E00E81817 /* ProductsCollectionViewCell.xib */; };
+		1EA827A828A27DC600A28197 /* AddProduct+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA827A728A27DC600A28197 /* AddProduct+ImagePicker.swift */; };
 		1ED4ACBE289D220C00FFD265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4ACBD289D220C00FFD265 /* AppDelegate.swift */; };
 		1ED4ACC0289D220C00FFD265 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4ACBF289D220C00FFD265 /* SceneDelegate.swift */; };
 		1ED4ACC2289D220C00FFD265 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4ACC1289D220C00FFD265 /* MainViewController.swift */; };
@@ -59,6 +60,7 @@
 		1EA14F5E289D8D5200E81817 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
 		1EA14F62289D8D8E00E81817 /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		1EA14F63289D8D8E00E81817 /* ProductsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsCollectionViewCell.xib; sourceTree = "<group>"; };
+		1EA827A728A27DC600A28197 /* AddProduct+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddProduct+ImagePicker.swift"; sourceTree = "<group>"; };
 		1ED4ACBA289D220C00FFD265 /* NVMProject-Re-build.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NVMProject-Re-build.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED4ACBD289D220C00FFD265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ED4ACBF289D220C00FFD265 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +207,14 @@
 			path = Products;
 			sourceTree = "<group>";
 		};
+		1EA827A628A27D9200A28197 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				1EA827A728A27DC600A28197 /* AddProduct+ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
 		1ED4ACB1289D220C00FFD265 = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				1EE3A12328A054AA002B3272 /* AddProductViewController.swift */,
+				1EA827A628A27D9200A28197 /* ImagePicker */,
 				1EDEDB8928A2732B0083352B /* CollectionView */,
 			);
 			path = View;
@@ -448,6 +459,7 @@
 				1EDEDB9028A274AB0083352B /* AddCollectionViewCell.swift in Sources */,
 				1ED4ACC2289D220C00FFD265 /* MainViewController.swift in Sources */,
 				1EA14F64289D8D8E00E81817 /* ProductsCollectionViewCell.swift in Sources */,
+				1EA827A828A27DC600A28197 /* AddProduct+ImagePicker.swift in Sources */,
 				1EE3A12428A054AA002B3272 /* AddProductViewController.swift in Sources */,
 				1EA14F4B289D814500E81817 /* HomeViewController.swift in Sources */,
 				1EA14F5A289D8D3500E81817 /* CatgoriesCollectionViewCell.swift in Sources */,

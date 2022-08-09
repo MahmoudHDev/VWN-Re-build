@@ -19,7 +19,7 @@ class AddCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        cellStyle()
+        self.cellStyle()
     }
     
     //MARK:- Methods
@@ -28,7 +28,8 @@ class AddCollectionViewCell: UICollectionViewCell {
     }
 
     func cellStyle() {
-        containerV.layer.cornerRadius = 8
+        containerV.layer.cornerRadius = 20
+        
         img.image = UIImage(systemName: "plus")
     }
 }

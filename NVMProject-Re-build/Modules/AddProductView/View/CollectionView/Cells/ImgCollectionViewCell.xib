@@ -20,16 +20,30 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9H-H7-A5D">
                         <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-z8-QCd">
-                                <rect key="frame" x="10" y="10" width="61" height="61"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-z8-QCd">
+                                <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpY-Ua-kzX">
+                                <rect key="frame" x="61" y="0.0" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="9yD-9G-E9x"/>
+                                    <constraint firstAttribute="height" constant="20" id="wtP-Pq-UrK"/>
+                                </constraints>
+                                <color key="tintColor" red="0.98431372549999996" green="0.41960784309999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="deleteImg:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Eie-6d-OQw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JMT-z8-QCd" firstAttribute="top" secondItem="t9H-H7-A5D" secondAttribute="top" constant="10" id="5Eg-mD-mdy"/>
-                            <constraint firstAttribute="trailing" secondItem="JMT-z8-QCd" secondAttribute="trailing" constant="10" id="80s-Td-j31"/>
-                            <constraint firstAttribute="bottom" secondItem="JMT-z8-QCd" secondAttribute="bottom" constant="10" id="gVG-56-LDe"/>
-                            <constraint firstItem="JMT-z8-QCd" firstAttribute="leading" secondItem="t9H-H7-A5D" secondAttribute="leading" constant="10" id="kpu-4x-Xo9"/>
+                            <constraint firstItem="JMT-z8-QCd" firstAttribute="top" secondItem="t9H-H7-A5D" secondAttribute="top" id="5Eg-mD-mdy"/>
+                            <constraint firstAttribute="trailing" secondItem="JMT-z8-QCd" secondAttribute="trailing" id="80s-Td-j31"/>
+                            <constraint firstItem="rpY-Ua-kzX" firstAttribute="top" secondItem="t9H-H7-A5D" secondAttribute="top" id="aqb-ho-Bts"/>
+                            <constraint firstAttribute="bottom" secondItem="JMT-z8-QCd" secondAttribute="bottom" id="gVG-56-LDe"/>
+                            <constraint firstAttribute="trailing" secondItem="rpY-Ua-kzX" secondAttribute="trailing" id="kXq-9q-Oju"/>
+                            <constraint firstItem="JMT-z8-QCd" firstAttribute="leading" secondItem="t9H-H7-A5D" secondAttribute="leading" id="kpu-4x-Xo9"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -46,10 +60,11 @@
                 <outlet property="containerV" destination="t9H-H7-A5D" id="aYS-In-JV2"/>
                 <outlet property="img" destination="JMT-z8-QCd" id="TsR-h1-GeM"/>
             </connections>
-            <point key="canvasLocation" x="147.10144927536234" y="130.91517857142856"/>
+            <point key="canvasLocation" x="147.10144927536234" y="130.24553571428572"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
