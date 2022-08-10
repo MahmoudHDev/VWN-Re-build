@@ -25,7 +25,6 @@ extension AddProductViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(arrImgs.count)
         if arrImgs.count == 0 {
             return 1
         } else if arrImgs.count > 0  {

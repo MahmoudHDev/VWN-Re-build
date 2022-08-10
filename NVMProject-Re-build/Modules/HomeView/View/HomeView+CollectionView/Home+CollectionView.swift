@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 //MARK:- DataSource
 extension HomeViewController: UICollectionViewDataSource {
@@ -42,7 +43,7 @@ extension HomeViewController: UICollectionViewDataSource {
         }else if collectionView == listsCollectionView  {
             return arrList.count
         }else {
-            return 6
+            return products?.count ?? 0
         }
     }
     
@@ -65,6 +66,9 @@ extension HomeViewController: UICollectionViewDataSource {
             return cellTwo
         }else {
             let cellThree: ProductsCollectionViewCell = productsCollectionView.dequeueReusableCell(withReuseIdentifier: K.collectionViewCells.products, for: indexPath) as! ProductsCollectionViewCell
+            
+            let prod = self.products![indexPath.row]
+            cellThree.setCell(img: UIImage(systemName: "house")!, title: prod.productName ?? "", price: prod.price ?? "none")
             
             return cellThree
         }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController {
     //MARK:- Outlets
@@ -19,18 +20,27 @@ class HomeViewController: UIViewController {
     //MARK:- Properties
     var arrCatgories    = [CatgoryModel]()
     var arrList         = [ListsModel]()
+    var products: [Product]?
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // CollectionViews
         self.collectionViewConfig()
         self.collectionViewNibs()
+        
         // UI Style
         self.updateUI()
+        
         // Set Models
         self.setCatgoriesModel()
         self.setListsModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchData()
     }
     
     //MARK:- Methods
@@ -54,7 +64,7 @@ class HomeViewController: UIViewController {
     
     private func setListsModel() {
         self.arrList = [
-            ListsModel(isSelected: true,    title: "All"),
+            ListsModel(isSelected: true,  title: "All"),
             ListsModel(isSelected: false, title: "Plates"),
             ListsModel(isSelected: false, title: "Hot Drinks"),
             ListsModel(isSelected: false, title: "Iced Coffee"),

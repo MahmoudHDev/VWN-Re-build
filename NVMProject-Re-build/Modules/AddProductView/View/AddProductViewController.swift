@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddProductViewController: UIViewController {
     //MARK:- Outlets
@@ -48,7 +49,10 @@ class AddProductViewController: UIViewController {
     var priceQuantity   : Int = 0
     var num             : Int = -1
     var itemType        : [String]  = ["Breakfast", "Dinner", "Launch", "Dessert"]
-    var arrImgs        : [UIImage] = []
+    var arrImgs         : [UIImage] = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var product: [Product]?
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -142,16 +146,24 @@ class AddProductViewController: UIViewController {
     
     // Done Button
     @IBAction func doneBtn(_ sender: UIButton) {
-        // Send the model to the database
-        print("save to coreData")
-        // after make the condition
+        let product         = Product(context: self.context)
+        
+        product.productName = productNameTextField.text ?? "No Name"
+        product.productInfo = productInfoTextField.text ?? "No Info"
+        product.meal        = mealTextField.text ?? "0"
+        product.price       = priceTextField.text ?? "0"
+
+        self.saveModel(productData: product)
+        
         self.dismiss(animated: true, completion: nil)
     }
     
     // Back Button
     @IBAction func backbtn(_ sender: UIButton) {
+
+        
         self.dismiss(animated: true, completion: nil)
-        // Dismiss the current view
+        
     }
 
 }
