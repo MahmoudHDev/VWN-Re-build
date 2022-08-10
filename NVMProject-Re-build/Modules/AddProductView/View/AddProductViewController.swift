@@ -44,15 +44,14 @@ class AddProductViewController: UIViewController {
 
     
     //MARK:- Propertiess
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var picker          = UIImagePickerController()
     var mealQuantity    : Int = 0
     var priceQuantity   : Int = 0
     var num             : Int = -1
     var itemType        : [String]  = ["Breakfast", "Dinner", "Launch", "Dessert"]
     var arrImgs         : [UIImage] = []
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var product: [Product]?
+    var product    : [Product]?
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -113,27 +112,36 @@ class AddProductViewController: UIViewController {
         self.mealTextField.text = String(mealQuantity)
     }
     
-    // Item Type
+        // Item Type
     @IBAction func itemTypeUp(_ sender: UIButton) {
-        // if num greater than itemType.count return the num to value of 0
-        
-        self.num += 1
-        let type = itemType[num]
-        self.itemTypeTextField.text = type
+        print(num)
+        print(itemType.count)
+        if num == itemType.count - 1 {
+            num = itemType.count - 1
+        }else{
+            self.num += 1
+            let type = itemType[num]
+            self.itemTypeTextField.text = type
+        }
         
     }
 
     @IBAction func itemTypeDown(_ sender: UIButton) {
-        // if num smaller than itemType.count return the num with value 0
-        
-        self.num -= 1
-        let type = itemType[num]
-        self.itemTypeTextField.text = type
+        if num == 0 {
+            num = 0
+        }else{
+            self.num -= 1
+            let type = itemType[num]
+            self.itemTypeTextField.text = type
+        }
+
 
     }
-    
+
     // Price
     @IBAction func priceUp(_ sender: UIButton) {
+        
+        
         self.priceQuantity += 1
         self.priceTextField.text = "\(priceQuantity) L.E"
         
@@ -144,15 +152,16 @@ class AddProductViewController: UIViewController {
 
     }
     
-    // Done Button
+        // Done Button
     @IBAction func doneBtn(_ sender: UIButton) {
+        // init the obj by context to store the data
         let product         = Product(context: self.context)
-        
+        // assign the values to the model
         product.productName = productNameTextField.text ?? "No Name"
         product.productInfo = productInfoTextField.text ?? "No Info"
         product.meal        = mealTextField.text ?? "0"
         product.price       = priceTextField.text ?? "0"
-
+        // Save the Object
         self.saveModel(productData: product)
         
         self.dismiss(animated: true, completion: nil)
@@ -160,7 +169,6 @@ class AddProductViewController: UIViewController {
     
     // Back Button
     @IBAction func backbtn(_ sender: UIButton) {
-
         
         self.dismiss(animated: true, completion: nil)
         

@@ -16,7 +16,7 @@ extension AddProductViewController: UIImagePickerControllerDelegate, UINavigatio
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let selectedImage = info[.originalImage] as? UIImage else {return}
         self.arrImgs.append(selectedImage)
-        print(arrImgs.count)
+        
         self.productCollectionView.reloadData()
         self.dismiss(animated: true, completion: nil)
     }
