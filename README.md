@@ -6,4 +6,6 @@
  - MVP Design Pattern.
  
  ## Screenshots
- ![MainView] (https://github.com/MahmoudHDev/VWN-Re-build/blob/main/Screenshots/AddProduct.png?raw=true)
+ ![MainView] (https://github.com/MahmoudHDev/VWN-Re-build/blob/main/Screenshots/MainView.png?raw=true)
+ ![Screenshot](MainView.png)
+
