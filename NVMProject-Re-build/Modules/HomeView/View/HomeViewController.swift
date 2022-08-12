@@ -32,7 +32,7 @@ class HomeViewController: UIViewController {
         
         // UI Style
         self.updateUI()
-//        self.tabBarStyle()
+        
         // Set Models
         self.setCatgoriesModel()
         self.setListsModel()
@@ -42,6 +42,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchData()
+        self.tabBarStyle()
     }
     
     //MARK:- Methods
@@ -73,9 +74,11 @@ class HomeViewController: UIViewController {
 
         ]
     }
+    
     func tabBarStyle() {
+        tabBarController?.tabBar.tintColor = .systemPink
         tabBarController?.tabBar.layer.cornerRadius = 30
-        tabBarController?.tabBar.clipsToBounds = true
+//        tabBarController?.tabBar.clipsToBounds = true
         tabBarController?.tabBar.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
     }
     
