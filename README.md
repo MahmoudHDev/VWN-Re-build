@@ -17,3 +17,4 @@
  
  ![AddProduct] (https://github.com/MahmoudHDev/VWN-Re-build/blob/main/Screenshots/AddProduct.png?raw=true)
  
+ <img src="VWN-Re-build/blob/main/Screenshots/AddProduct.png" alt="AddProduct="Screen Shot of Add Product view">
