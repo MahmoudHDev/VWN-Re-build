@@ -32,10 +32,11 @@ class HomeViewController: UIViewController {
         
         // UI Style
         self.updateUI()
-        
+//        self.tabBarStyle()
         // Set Models
         self.setCatgoriesModel()
         self.setListsModel()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,6 +72,11 @@ class HomeViewController: UIViewController {
             ListsModel(isSelected: false, title: "Soft Drinks")
 
         ]
+    }
+    func tabBarStyle() {
+        tabBarController?.tabBar.layer.cornerRadius = 30
+        tabBarController?.tabBar.clipsToBounds = true
+        tabBarController?.tabBar.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
     }
     
     //MARK:- Actions
